@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded&display=swap" rel="stylesheet">
+    <!-- ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header>
+                <h1>Color Scheme Generator</h1>
+                <div class="buttons">
+                    <input type="color" id="color-picker">
+                    <select name="scheme" id="scheme">
+                        <option value="monochrome-dark">Monochrome Dark</option>
+                        <option value="monochrome-light">Monochrome Light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complementary</option>
+                        <option value="analogic-complement">Analogic-Complementary</option>
+                        <option value="triad">Triad</option>
+                        <option value="quad">Quad</option>
+                    </select>
+                    <button id="generate-btn">Generate</button>
+                </div>
+            </header>
+            <div class="color-palette">
+                <div class="clr" id="clr1">
+                    <h3 class="clr-code" id="code1"></h3>
+                </div>
+                <div class="clr" id="clr2">
+                    <h3 class="clr-code" id="code2"></h3>
+                </div>
+                <div class="clr" id="clr3">
+                    <h3 class="clr-code" id="code3"></h3>
+                </div>
+                <div class="clr" id="clr4">
+                    <h3 class="clr-code" id="code4"></h3>
+                </div>
+                <div class="clr" id="clr5">
+                    <h3 class="clr-code" id="code5"></h3>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            cyscodess
+            <a href="https://github.com/cyscodess">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

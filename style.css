@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body,
+button,
+select {
+    font-family: "Unbounded", sans-serif;
+    color: #000;
+}
+
+.container {
+    width: 100vw;
+    height: 80vh;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: lightblue;
+    padding: 1em;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+footer {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1rem;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 1.5rem;
+}
+
+.buttons {
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+button, 
+select,
+input[type="color"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+button,
+select,
+.clr-code {
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 0 1.8em;
+}
+
+button:hover {
+    background-color: #e6f9ff;
+    color: #000;
+}
+
+button:active {
+    background-color: #a1cbd8;
+    color: #fff;
+}
+
+.color-palette {
+    display: flex;
+    height: 100%;
+}
+
+.clr {
+    background-color: #f0f8ff;
+    width: 20%;
+    position: relative;
+    border-right: 2px solid #fff;
+}
+
+.clr-code {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1.8rem;
+}
