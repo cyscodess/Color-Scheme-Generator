@@ -102,4 +102,5 @@ button:active {
     left: 0;
     right: 0;
     bottom: 1.8rem;
+    cursor: pointer;
 }

@@ -1,6 +1,8 @@
 const generateBtn = document.getElementById("generate-btn")
+const colorPalette = document.getElementById("color-palette")
 
 generateBtn.addEventListener("click", generateScheme)
+colorPalette.addEventListener("click", copyToClipboard)
 
 function generateScheme() {
     const selectedColor = document.getElementById("color-picker").value.slice(1)
@@ -14,4 +16,11 @@ function generateScheme() {
                 document.getElementById(`code${i}`).innerText = colorScheme[i-1].hex.value
             }
         })
+}
+
+function copyToClipboard(e) {
+    if (e.target.tagName === "H3") {
+        navigator.clipboard.writeText(e.target.textContent)
+        console.log(e.target.textContent)
+    }
 }
