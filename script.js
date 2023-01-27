@@ -1,5 +1,6 @@
 const generateBtn = document.getElementById("generate-btn")
 const colorPalette = document.getElementById("color-palette")
+const container = document.getElementById("container")
 
 generateBtn.addEventListener("click", generateScheme)
 colorPalette.addEventListener("click", copyToClipboard)
@@ -21,6 +22,11 @@ function generateScheme() {
 function copyToClipboard(e) {
     if (e.target.tagName === "H3") {
         navigator.clipboard.writeText(e.target.textContent)
-        console.log(e.target.textContent)
+        
+        let popup = document.createElement("span")
+        popup.classList.add("copied")
+        popup.innerHTML = `${e.target.textContent} copied to clipboard!`
+        container.appendChild(popup)
+        setTimeout(() => container.removeChild(popup), 2000)
     }
 }
